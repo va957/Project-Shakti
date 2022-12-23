@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Disease Prediction</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form id="form1">
+        {% csrf_token %}
+      <div style="margin-left: 40%;">
+            <h4>Sweating : <input type="number" id="sweating"></h4>
+            <h4>Breathlessness : <input type="number" id="breathlessness"></h4>
+            <h4>continuous_feel_of_urine : <input type="number" id="continuous_feel_of_urine"></h4>
+            <h4>bladder_discomfort : <input type="number" id="bladder_discomfort"></h4>
+            <h4>burning_micturition : <input type="number" id="burning_micturition"></h4>
+            <h4>foul_smell_of urine : <input type="number" id="foul_smell_of urine"></h4>
+            <h4>vomiting : <input type="number" id="vomiting"></h4>
+            <h4>constipation : <input type="number" id="constipation"></h4>
+            <h4>toxic_look_(typhos) : <input type="number" id="toxic_look"></h4>
+            <h4>belly_pain : <input type="number" id="belly_pain"></h4>
+            <h4>skin_rash : <input type="number" id="skin_rash"></h4>
+            <h4>continuous_sneezing : <input type="number" id="continuous_sneezing"></h4>
+            <h4>pus_filled_pimples : <input type="number" id="pus_filled_pimples"></h4>
+            <h4>blackheads : <input type="number" id="blackheads"></h4>
+            <h4>scurring : <input type="number" id="scurring"></h4>
+            <h4>shivering : <input type="number" id="shivering"></h4>
+            <h4>watering_from_eyes : <input type="number" id="watering_from_eyes"></h4>
+            <h4>red_spots_over_body : <input type="number" id="red_spots_over_body"></h4>
+            <h4>swelling_joints : <input type="number" id="swelling_joints"></h4>
+            <h4>painful_walking : <input type="number" id="painful_walking"></h4>
+            <h4>movement_stiffness : <input type="number" id="movement_stiffness"></h4>
+        </div>
+        <div style="text-align: center;">
+            <input type="submit" value="Predict">
+            <!-- <button>Predict</button> -->
+        </div>
+        <h1 id="result"></h1>
+    </form>
+</body>
+
+<script type="text/javascript">
+    async function decMsg(encMsg, i) {
+      await fetch(`/decrypt/${encMsg}`, {
+        "method": "GET"
+      })
+        .then(response => response.json())
+        .then((dataobj) => {
+          // console.log(dataobj.decMessage)
+          if (String(dataobj.decMessage).search('http') == 0 && (String(dataobj.decMessage).search('jpg') || String(dataobj.decMessage).search('jpeg') || String(dataobj.decMessage).search('png') || String(dataobj.decMessage).search('gif'))) {
+            document.getElementById(`img${i}`).src = dataobj.decMessage;
+            return dataobj.decMessage
+          }
+          document.getElementById(`msg${i}`).innerHTML = dataobj.decMessage
+          return dataobj.decMessage
+        })
+        .catch(err => {
+          console.error(err)
+        });
+    }
+    $(document).on('submit', '#form1', function (e) {
+      e.preventDefault();
+      $.ajax({
+        type: 'POST',
+        url: '/diseaseprediction',
+        data: {
+          d1: $('#sweating').val().toString(),
+          d2: $('#breathlessness').val(),
+          d3: $('#continuous_feel_of_urine').val(),
+          d4: $('#bladder_discomfort').val(),
+          d5: $('#burning_micturition').val(),
+          d6: $('#foul_smell_of urine').val(),
+          d7: $('#vomiting').val(),
+          d8: $('#constipation').val(),
+          d9: $('#toxic_look').val(),
+          d10: $('#belly_pain').val(),
+          d11: $('#skin_rash').val(),
+          d12: $('#continuous_sneezing').val(),
+          d13: $('#pus_filled_pimples').val(),
+          d14: $('#blackheads').val(),
+          d15: $('#scurring').val(),
+          d16: $('#shivering').val(),
+          d17: $('#watering_from_eyes').val(),
+          d18: $('#red_spots_over_body').val(),
+          d19: $('#swelling_joints').val(),
+          d20: $('#painful_walking').val(),
+          d21: $('#movement_stiffness').val(),
+          csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+        },
+        success: function (data) {
+          console.log(data);
+          document.getElementById('result').innerHTML = data.disname;
+          //alert(data)
+        }
+      });
+    });
+</script>
+
+</html>

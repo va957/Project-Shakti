@@ -1,0 +1,161 @@
+<!Doctype HTML>
+	<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+		<script src="https://kit.fontawesome.com/5d5d2c3dfb.js" crossorigin="anonymous"></script>
+	</head>
+
+
+	<body>
+		
+		<div id="mySidenav" class="sidenav">
+		<p class="logo"><span>P</span>atient</p>
+	  <a href="#" class="icon-a">Profile Details</a>
+
+      <p class="b">Name    :      Ram</p>
+      <p class="b">Adhaarnum    :     3892094</p>
+      <p class="b">Pincode   :      3839</p>
+      <p class="b">Address    :      Qtah 1 marg</p>
+      <p class="b">Age  :     56</p>
+      <p class="b">Height    :      175cm</p>
+      <p class="b">marital status    :      unmarried</p>
+      <p class="b">Phone    :      92838292839</p>
+      <p class="b">sex    :      Male</p>
+      <p class="b">weight    :      75kg</p>
+
+	</div>
+	<div id="main">
+
+		<div class="head">
+			<div class="col-div-6">
+	<span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >☰ Dashboard</span>
+	<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >☰ Dashboard</span>
+	</div>
+		
+	<div class="clearfix"></div>
+	<br/><br/>
+		<div class="col-div-3">
+			<div class="box">
+				<p>90-100<br/><span>Blood pressure Range</span></p>
+			</div>
+		</div>
+		<div class="col-div-3">
+			<div class="box">
+				<p>99<br/><span>Respiration</span></p>
+			</div>
+		</div>
+		<div class="col-div-3">
+			<div class="box">
+				<p>60<br/><span>Oxygen_Saturation</span></p>
+			</div>
+		</div>
+		<div class="col-div-3">
+			<div class="box">
+				<p>100<br/><span>Pulse</span></p>
+			</div>
+		</div>
+
+		<div class="col-div-3">
+			<div class="box">
+				<p>98 f<br/><span>Temperature</span></p>
+			</div>
+		</div>
+		<div class="col-div-3">
+			<div class="box">
+				<p>25/5/22<br/><span>Date and Time</span></p>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<br/><br/>
+		<div class="col-div-8">
+			<div class="box-8">
+			<div class="content-box">
+				<p>Prescription History <span>Most Recent</span></p>
+				<br/>
+				<table>
+	  <tr>
+	    <th>Doctor Name</th>
+	    <th>Date</th>
+	    <th>Medicines and dosage</th>
+	  </tr>
+	  <tr>
+	    <td>Dr Alfreds</td>
+	    <td>1/5/22 3 pm</td>
+	    <td>1*paracetamol,2*dispirin</td>
+	  </tr>
+	  <tr>
+	    <td>Dr Alfreds</td>
+	    <td>1/5/22 3 pm</td>
+	    <td>1*paracetamol,2*dispirin</td>
+	  </tr>
+	  <tr>
+	    <td>Dr Alfreds</td>
+	    <td>1/5/22 3 pm</td>
+	    <td>1*paracetamol,2*dispirin</td>
+	  </tr>
+	  
+	</table>
+			</div>
+		</div>
+		</div>
+
+		<div class="col-div-4">
+			<div class="box-4">
+			<div class="content-box">
+				<p>Appointment Scheduled <br><span>10 am </span></p>
+				<p><br>Total Appointments</p>
+				<div class="circle-wrap">
+	    <div class="circle">
+	      <div class="mask full">
+	        <div class="fill"></div>
+	      </div>
+	      <div class="mask half">
+	        <div class="fill"></div>
+	      </div>
+		
+	      <div class="inside-circle"> 70 </div>
+
+
+	    </div>
+	  </div>
+			</div>
+		</div>
+		</div>
+			
+		<div class="clearfix"></div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+
+	  $(".nav").click(function(){
+	    $("#mySidenav").css('width','70px');
+	    $("#main").css('margin-left','70px');
+	    $(".logo").css('visibility', 'hidden');
+	    $(".logo span").css('visibility', 'visible');
+	     $(".logo span").css('margin-left', '-10px');
+	     $(".icon-a").css('visibility', 'hidden');
+	     $(".icons").css('visibility', 'visible');
+	     $(".icons").css('margin-left', '-8px');
+	      $(".nav").css('display','none');
+	      $(".nav2").css('display','block');
+	  });
+
+	$(".nav2").click(function(){
+	    $("#mySidenav").css('width','300px');
+	    $("#main").css('margin-left','300px');
+	    $(".logo").css('visibility', 'visible');
+	     $(".icon-a").css('visibility', 'visible');
+	     $(".icons").css('visibility', 'visible');
+	     $(".nav").css('display','block');
+	      $(".nav2").css('display','none');
+	 });
+
+	</script>
+
+	</body>
+
+
+	</html>

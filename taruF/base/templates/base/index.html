@@ -1,0 +1,234 @@
+{% load static %} 
+
+{% blockcontent %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Store</title>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width,initial-scal=1.0">
+    <meta http-equip="X-UA-compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{%static 'styles/main.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.store.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    			<span class="navbar-toggler-icon"></span>
+  		</button>
+
+
+
+            <div class="topnav">
+                <div class="image">
+                    <img src="" alt=""/>
+                </div>
+                <a style="color:black;" class="active" href="#home">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a style="color:black;" class="nav-link" href="#AboutUs">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color:black;" class="nav-link" href="#Help">Help</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a style="color:black;" class="nav-link" href="{%url 'signin and signup/sigin.html'%}">Signup Page</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a style="color:black;" class="nav-link" href="{%url 'signin and signup/signup.html'">Login Page</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a style="color:black;" class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+        <div class="category">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="category-item ch-400">
+                            <img src="medicine1.jpeg" height="20px" width="30px" />
+                            <a class="category-name" href="">
+                                <p>Medicinal History</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="category-item ch-250">
+                            <img src="medicine2.jpg" />
+                            <a class="category-name" href="">
+                                <p>Regular Health Checkups</p>
+                            </a>
+                        </div>
+                        <div class="category-item ch-150">
+                            <img src="medicine3.jpg" />
+                            <a class="category-name" href="">
+                                <p>Online Consultations</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="category-item ch-150">
+                            <img src="medicine4.webp" />
+                            <a class="category-name" href="">
+                                <p>Knowledge on symptoms</p>
+                            </a>
+                        </div>
+                        <div class="category-item ch-250">
+                            <img src="medicine 6.jpg" />
+                            <a class="category-name" href="">
+                                <p>Digital Prescriptions</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="category-item ch-400">
+                            <img src="medicine 5.png">
+                            <a class="category-name" href="">
+                                <p>Chat with a specialist</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------About Section------->
+        <section id="AboutUs">
+
+            <div class="container">
+                <h1>About Us</h1>
+                <div class="Description">
+                    <p>We are a Taru Foundation initative, aiming to build an interactive Telemedicine platform to provide a remote connectivity to underpriveleged with basic healthcare needs like online consultations, Video Call appointments and Self Testing. </p>
+                </div>
+                <div class="row services">
+                    <div class="col-md-4 text-center">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <h3> 24/7 Medical Support</h3>
+                        <p>Book Appointments and get your checkup done</p>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <div class="icon">
+                            <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                        </div>
+                        <h3> Get Digital Prescriptions</h3>
+                        <p>Contains Remarks, Conclusions and past records</p>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <div class="icon">
+                            <i class="fa fa-comments" aria-hidden="true"></i>
+                        </div>
+                        <h3>Detect Diseases</h3>
+                        <p>Take health quizzes and Detect ailments on the basis of symptoms </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    
+        <section class="abc">
+            <div class="container">
+                <h1>Our Partners</h1>
+            </div>
+           
+        <div class="wrapper">
+            <div class="photobanner">
+                <img class="first" src="pic1.jpg" alt="" />
+                <img src="pic2.jpeg" alt="" />
+                <img src="pic3.png" alt="" />
+                
+            </div>
+        </div>
+    </section>
+
+
+        <!-- help -->
+        <section id="Help">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Help Section</h2>
+                        <div class="about-help">
+                          
+                            <p>Stay Updated about the nearest Govt Hospitals and Helpline Numbers</p>
+                        
+
+
+                    </div>
+                </section>
+
+            <!-- ----COntact--------->
+            <section id="contact">
+
+                <div class="container">
+                    <h1>Get In Touch</h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form class="contact-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name..">
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" placeholder="Phone no.">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email..">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="4" placeholder="Message.."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                        <div class="col-md-6 contact-info">
+                            <div class="follow"><b><i class="fa fa-map-marker"></i>  </b>Chattisgarh</div>
+                            <div class="follow"><b><i class="fa fa-mobile"></i>  </b>+91 7067194742</div>
+                            <div class="follow"><b><i class="fa fa-envelope"></i>  </b>  SUPPORT@TARUFOUNDATION.COM</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section> --> --> -->
+            <!-- Footer Bottom Start -->
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 copyright">
+                            <p>Copyright &copy; <a href="#">Team SocioTech</a>. All Rights Reserved</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+ 
+</body>
+
+</html>
+{% endblock %}

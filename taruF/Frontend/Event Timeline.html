@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .title {
+        padding-top: 20px;
+        background-color: #020628;
+        text-align: center;
+        color: aliceblue;
+        font-size: 30px;
+    }
+    
+    .container {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 0;
+        background-color: #020628;
+    }
+    
+    .timeline {
+        color: white;
+        width: 80%;
+        height: auto;
+        max-width: 800%;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .timeline ul {
+        list-style: none;
+    }
+    
+    .timeline ul li {
+        padding: 20px;
+        background-color: #1e1f22;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .timeline ul li:last-child {
+        margin-bottom: 0;
+    }
+    
+    .timeline-content h1 {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .timeline-content p {
+        font-size: 19px;
+        line-height: 30px;
+        font-weight: 300;
+        color: rgb(167, 167, 167);
+    }
+    
+    .timeline-content .date {
+        font-size: 19px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+    
+    @media only screen and (min-width:668px) {
+        .timeline::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: gray;
+        }
+        .timeline ul li {
+            width: 50%;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .timeline ul li:nth-child(odd) {
+            float: left;
+            clear: right;
+            transform: translateX(-30px);
+        }
+        .timeline ul li:nth-child(even) {
+            float: right;
+            clear: left;
+            transform: translate(30px);
+        }
+        .timeline ul li::after {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-color: gray;
+            border-radius: 50%;
+            top: 0;
+        }
+        .timeline ul li:nth-child(odd)::after {
+            transform: translate(50%, -50%);
+            right: -30px;
+        }
+        .timeline ul li:nth-child(even)::after {
+            transform: translate(-50%, -50%);
+            left: -30px;
+        }
+        .timeline ul li:hover:after {
+            background-color: aqua;
+        }
+        .timeline-content .date {
+            position: absolute;
+            top: -25px;
+        }
+    }
+</style>
+
+<body>
+    <div class="title">
+        <h1>Event Timeline</h1>
+    </div>
+    <div class="container">
+
+        <div class="timeline">
+            <ul>
+                <li>
+
+                    <div class="timeline-content">
+                        <h2 class="date">20th may,2022</h2>
+                        <h1>
+                            Blood Donation
+                        </h1>
+                        <p>
+                            The event serves to thank voluntary, unpaid blood donors for their life-saving gifts of blood and to raise awareness of the need for regular blood donations to ensure the quality, safety and availability of blood and blood products for patients in need.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-content">
+                        <h2 class="date">20th june,2022</h2>
+                        <h1>
+                            Health Camp
+                        </h1>
+                        <p>
+                            Taru Foundation organised a Medical Health Check-up Camp for all the people. A team of dedicated doctors from KMC Hospital conducted the camp which included General Physical examination, Dental Check-up and Eye & Ear check-up. Necessary medical advice
+                            and precautionary measured were given to all the students.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-content">
+                        <h2 class="date">23th july,2022</h2>
+                        <h1>
+                            Awareness Campaign
+                        </h1>
+                        <p>
+                            Our focus areas are Health & Hygiene, Hand Washing, Menstrual Hygiene, Oral Hygiene, Nutrition, Dengue, Breastfeeding, Anemia, Tobacco Sensitization, Immunization and Cancer
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-content">
+                        <h2 class="date">20th may,2022</h2>
+                        <h1>
+                            Monthly Checkup
+                        </h1>
+                        <p>
+                            Taru Foundation is organizing a medical health checkup camp for underprivileged. A team of the doctor from the Max hospital would be conducting the camp on 21st December 2018. Which includes blood pressure checkup, physical examination, eye checkup, dental
+                            checkup, and BMI checkup
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+
+</html>

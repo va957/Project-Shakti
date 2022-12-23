@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="https://github.com/rubyeffect/easy_fill/tree/master/lib/easy_fill-0.0.1.min.js"></script>
+    <title>Reach Me</title>
+    <link rel="stylesheet" type="text/css" href="appointment.css" />
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div id="container">
+        <!--This is a division tag for body container-->
+        <div id="body_header">
+            <!--This is a division tag for body header-->
+            <h1>Appointment Request Form</h1>
+            <!-- <p>Make your appointments more easier</p> -->
+
+        </div>
+        <form action="index.html" method="post">
+            <fieldset>
+                <legend><span class="number">1</span>Your basic details</legend>
+                <label for="name">Name*:</label>
+                <input type="text" id="name" name="user_name" placeholder="Name" required pattern="[a-zA-Z0-9]+">
+
+                <label for="Age">Age:</label>
+                <input type="text" id="Age" name="user_age" placeholder="your age?" required>
+
+                <label for="tel">Contact Number:</label>
+                <input type="tel" id="tel" placeholder="(+91-)" name="user_num">
+
+                <label for="Gender">Gender</label>
+                <input type="text" id="Gender" name="gender" placeholder="your Gender?">
+            </fieldset>
+
+            <fieldset>
+                <legend><span class="number">2</span>Vitals details</legend>
+
+
+                <label for="hbp">Systolic blood pressure </label>
+                <input type="text" id="hbp" name="High_BP" placeholder="systolic blood pressure">
+                <label for="lbp">Diastolic blood pressure</label>
+                <input type="text" id="lbp" name="Low_Bp" placeholder="diastolic blood pressure">
+
+                <label for="pulse">Pulse:</label>
+                <input type="text" id="pulse" name="Pulse" placeholder="Pulse Rate">
+
+                <label for="resp">Respiration:</label>
+                <input type="text" id="resp" name="Respiration" placeholder="Respiration">
+
+                <label for="ox_s">Oxygen Saturation:</label>
+                <input type="text" id="ox_s" name="oxy_sat" placeholder="Oxygen Saturation">
+                <!-- 
+                <label for="pid">Patient Id:</label>
+                <input type="text" id="pid" name="p_id" placeholder="Id"> -->
+
+                <label for="height">Height:</label>
+                <input type="text" id="height" name="height" placeholder="Height(in cms)" required>
+
+                <label for="tel">Body Temperature:</label>
+                <input type="tel" id="tel" placeholder="temp" name="temperature (in *c)">
+
+
+            </fieldset>
+
+            <button type="submit">Request For Appointment</button>
+        </form>
+    </div>
+</body>
+
+</html>
