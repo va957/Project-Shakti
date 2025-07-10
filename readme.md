@@ -8,7 +8,7 @@
 <!-- ABOUT THE PROJECT -->
 
 ## Brief About The Project
-* Project Shakti is an initiative by Taru Foundation to provide remote health facilities to the underpriveleged sections of society.
+* Project Shakti is a developed as part of Code for Good' 2022 organised by JP Morgan Chase for Taru Foundation to provide remote health facilities to the underpriveleged sections of society.
 * It is a Django based Web Application using Agora for video conferencing
 * It is a telimedicine platform providing facilities of digital prescriptions,online consultations, Vitals Checkup and support offered by Rural Medical Practitioner to connect the patients and doctors.
 
